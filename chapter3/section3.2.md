@@ -1,5 +1,5 @@
 # Starting HTTP/2 for "http" URIs / 为"http" URIs启用HTTP/2协议
-> A client that makes a request for an "http" URI without prior knowledge about support for HTTP/2 on the next hop uses the HTTP Upgrade mechanism (Section 6.7 of [RFC7230]). The client does so by making an HTTP/1.1 request that includes an Upgrade header field with the "h2c" token. Such an HTTP/1.1 request MUST include exactly one HTTP2-Settings (Section 3.2.1) header field.
+> A client that makes a request for an "http" URI without prior knowledge about support for HTTP/2 on the next hop uses the HTTP Upgrade mechanism ([Section 6.7](https://httpwg.github.io/specs/rfc7230.html#header.upgrade) of [[RFC7230]](https://httpwg.github.io/specs/rfc7540.html#RFC7230)). The client does so by making an HTTP/1.1 request that includes an Upgrade header field with the "h2c" token. Such an HTTP/1.1 request MUST include exactly one HTTP2-Settings ([Section 3.2.1](https://httpwg.github.io/specs/rfc7540.html#Http2SettingsHeader)) header field.
 > 
 > For example:
 > 
