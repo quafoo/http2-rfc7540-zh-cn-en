@@ -1,7 +1,7 @@
 # 1. Introduction / 前言
 > The Hypertext Transfer Protocol (HTTP) is a wildly successful protocol. However, the way HTTP/1.1 uses the underlying transport ([RFC7230], Section 6) has several characteristics that have a negative overall effect on application performance today.
 
-超文本传输协议(HTTP)是一个非常成功的协议。但是，HTTP/1.1使用下层传输层(*[[RFC7230]](https://httpwg.github.io/specs/rfc7540.html#RFC7230)*，[第6章](https://httpwg.github.io/specs/rfc7230.html#connection.management))的方式所具有的一些特性，对如今的应用层性能产生了一个全面的消极的影响。
+超文本传输协议(HTTP)是一个非常成功的协议。但是，HTTP/1.1使用下层传输层( *[[RFC7230]](https://httpwg.github.io/specs/rfc7540.html#RFC7230)* ， [第6章](https://httpwg.github.io/specs/rfc7230.html#connection.management) )的方式所具有的一些特性，对如今的应用层性能产生了一个全面的消极的影响。
 
 > In particular, HTTP/1.0 allowed only one request to be outstanding at a time on a given TCP connection. HTTP/1.1 added request pipeling, but this only partially addressed request concurrency and still suffers from head-of-line blocking. Therefore, HTTP/1.0 and HTTP/1.1 clients that need to make many requests use multiple connections to a server in order to achieve concurrency and thereby reduce latency.
 

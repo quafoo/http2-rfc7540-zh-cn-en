@@ -1,7 +1,7 @@
 # Starting HTTP/2 / 开始HTTP/2
 > An HTTP/2 connection is an application-layer protocol running on top of a TCP connection ([*TCP*](https://httpwg.github.io/specs/rfc7540.html#TCP)). The client is the TCP connection initiator.
 
-HTTP/2是运行于TCP连接([*[TCP]*](https://httpwg.github.io/specs/rfc7540.html#TCP))之上的应用层协议。客户端是TCP连接的发起者。
+HTTP/2是运行于TCP连接( [*[TCP]*](https://httpwg.github.io/specs/rfc7540.html#TCP) )之上的应用层协议。客户端是TCP连接的发起者。
 
 > HTTP/2 uses the same "http" and "https" URI schemes used by HTTP/1.1. HTTP/2 shares the same default port numbers: 80 for "http" URIs and 443 for "https" URIs. As a result, implementations processing requests for target resource URIs like http://example.org/foo or https://example.com/bar are required to first discover whether the upstream server (the immediate peer to which the client wishes to establish a connection) supports HTTP/2.
 

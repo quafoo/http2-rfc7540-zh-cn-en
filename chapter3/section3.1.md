@@ -11,7 +11,7 @@
 
 本文档定义的协议有两个标识符：
 
-* 字符串"h2"表示HTTP/2协议使用了[安全传输层协议(TLS)](https://httpwg.github.io/specs/rfc7540.html#TLS12)*[TLS12]*。该标识符用在[TLS应用层协议协商(ALPN)扩展](https://httpwg.github.io/specs/rfc7540.html#TLS-ALPN)*[TLS-ALPN]*字段，以及任何在TLS之上运行HTTP/2的场合。
+* 字符串"h2"表示HTTP/2协议使用了 [安全传输层协议(TLS)](https://httpwg.github.io/specs/rfc7540.html#TLS12) *[TLS12]*。该标识符用在 [TLS应用层协议协商(ALPN)扩展](https://httpwg.github.io/specs/rfc7540.html#TLS-ALPN) *[TLS-ALPN]*字段，以及任何在TLS之上运行HTTP/2的场合。
 	
   "h2"字符串被序列化成一个ALPN协议标识符，其形式是两个字节的序列：0x68，0x32。
 

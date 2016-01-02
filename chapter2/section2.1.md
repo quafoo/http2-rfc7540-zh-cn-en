@@ -8,10 +8,10 @@
 
 HTTP/2规范分为四个部分：
 
-* 开始HTTP/2一节([第3章](https://httpwg.github.io/specs/rfc7540.html#starting))涵盖了怎样初始化一个HTTP/2连接。
-* 帧层([第4章](https://httpwg.github.io/specs/rfc7540.html#FramingLayer))和流层([第5章](https://httpwg.github.io/specs/rfc7540.html#StreamsLayer))两章描述了HTTP/2帧怎样被构造并形成多路复用的流。
-* 帧定义([第6章](https://httpwg.github.io/specs/rfc7540.html#FrameTypes))和错误定义([第7章](https://httpwg.github.io/specs/rfc7540.html#ErrorCodes))包含了HTTP/2的帧和错误类型的细节。
-* HTTP映射([第8章](https://httpwg.github.io/specs/rfc7540.html#HTTPLayer))与附加要求([第9章](https://httpwg.github.io/specs/rfc7540.html#HttpExtra))描述了HTTP语义是怎样用帧和流来表达的。
+* 开始HTTP/2一节( [第3章](https://httpwg.github.io/specs/rfc7540.html#starting) )涵盖了怎样初始化一个HTTP/2连接。
+* 帧层( [第4章](https://httpwg.github.io/specs/rfc7540.html#FramingLayer) )和流层( [第5章](https://httpwg.github.io/specs/rfc7540.html#StreamsLayer) )两章描述了HTTP/2帧怎样被构造并形成多路复用的流。
+* 帧定义( [第6章](https://httpwg.github.io/specs/rfc7540.html#FrameTypes) )和错误定义( [第7章](https://httpwg.github.io/specs/rfc7540.html#ErrorCodes) )包含了HTTP/2的帧和错误类型的细节。
+* HTTP映射( [第8章](https://httpwg.github.io/specs/rfc7540.html#HTTPLayer) )与附加要求( [第9章](https://httpwg.github.io/specs/rfc7540.html#HttpExtra) )描述了HTTP语义是怎样用帧和流来表达的。
 
 > While some of the frame and stream layer concepts are isolated from HTTP, this specification does not define a completely generic frame layer. The frame and stream layers are tailored to the needs of the HTTP protocol and server push.
 

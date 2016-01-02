@@ -1,7 +1,7 @@
 # 2.2 Conventions and Terminology /  约定和术语
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [*[RFC2119]*](https://httpwg.github.io/specs/rfc7540.html#RFC2119).
 
-本文档中出现的关键词"MUST","MUST NOT","REQUIRED","SHALL","SHALL NOT","SHOULD","SHOULD NOT","RECOMMENDED","MAY",和"OPTIONAL"在RFC 2119 [*[RFC2119]*](https://httpwg.github.io/specs/rfc7540.html#RFC2119)中有解释。
+本文档中出现的关键词"MUST","MUST NOT","REQUIRED","SHALL","SHALL NOT","SHOULD","SHOULD NOT","RECOMMENDED","MAY",和"OPTIONAL"在RFC 2119 [ *[RFC2119]*](https://httpwg.github.io/specs/rfc7540.html#RFC2119) 中有解释。
 
 > All numeric values are in network byte order. Values are unsigned unless otherwise indicated. Literal values are provided in decimal or hexadecimal as appropriate. Hexadecimal literals are prefixed with 0x to distinguish them from decimal literals.
 
@@ -38,8 +38,8 @@
 
 > Finally, the terms "gateway", "intermediary", "proxy", and "tunnel" are defined in [Section 2.3](https://httpwg.github.io/specs/rfc7230.html#intermediaries) of [*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230). Intermediaries act as both client and server at different times.
 
-最后，『网关』、『中介』、『代理』和『隧道』等术语都在[*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230)的[2.3节](https://httpwg.github.io/specs/rfc7230.html#intermediaries)中有定义。在不同的时候，中介既可以是客户端，又可以是服务端。
+最后，『网关』、『中介』、『代理』和『隧道』等术语都在 [*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230) 的 [2.3节](https://httpwg.github.io/specs/rfc7230.html#intermediaries) 中有定义。在不同的时候，中介既可以是客户端，又可以是服务端。
 
 > The term "payload body" is defined in [Section 3.3](https://httpwg.github.io/specs/rfc7230.html#message.body) of [*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230).
 
-术语『有效载荷体』在[*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230)的[3.3节](https://httpwg.github.io/specs/rfc7230.html#message.body)中有定义。
+术语『有效载荷体』在 [*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230) 的 [3.3节](https://httpwg.github.io/specs/rfc7230.html#message.body) 中有定义。
