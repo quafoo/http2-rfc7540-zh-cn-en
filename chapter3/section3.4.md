@@ -1,7 +1,7 @@
 # Starting HTTP/2 with Prior Knowledge / 以先验方式启用HTTP/2
 > A client can learn that a particular server supports HTTP/2 by other means. For example, [*[ALT-SVC]*](https://httpwg.github.io/specs/rfc7540.html#ALT-SVC) describes a mechanism for advertising this capability.
 
-客户端可以通过其他方式了解服务端是否支持HTTP/2。例如，[*[ALT-SVC]*](https://httpwg.github.io/specs/rfc7540.html#ALT-SVC) 描述了一种广播支持HTTP/2的机制。
+客户端可以通过其他方式了解服务端是否支持HTTP/2。例如，[*[ALT-SVC]*](https://httpwg.github.io/specs/rfc7540.html#ALT-SVC) 描述了一种通知支持HTTP/2的机制。
 
 > A client MUST send the connection preface ([Section 3.5](https://httpwg.github.io/specs/rfc7540.html#ConnectionHeader)) and then MAY immediately send HTTP/2 frames to such a server; servers can identify these connections by the presence of the connection preface. This only affects the establishment of HTTP/2 connections over cleartext TCP; implementations that support HTTP/2 over TLS MUST use protocol negotiation in TLS *[TLS-ALPN]*.
 
