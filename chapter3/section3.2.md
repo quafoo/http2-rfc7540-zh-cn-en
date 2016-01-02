@@ -11,7 +11,7 @@
 > HTTP2-Settings: <base64url encoding of HTTP/2 SETTINGS payload>
 > ```
 
-事先不知道下一跳是否支持HTTP/2的客户端，使用HTTP的Upgrade机制(*[RFC7230]*的6.7节)发起"http"URI请求。其做法是：客户端先发起HTTP/1.1请求，该请求包含值为"h2c"的Upgrade首部字段，还必须包含一个HTTP2-Settings(3.2.1节)首部字段。
+事先不知道下一跳是否支持HTTP/2的客户端，使用HTTP的Upgrade机制([*[RFC7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230)的[6.7节](https://httpwg.github.io/specs/rfc7230.html#header.upgrade))发起"http"URI请求。其做法是：客户端先发起HTTP/1.1请求，该请求包含值为"h2c"的Upgrade首部字段，还必须包含一个HTTP2-Settings([3.2.1节](https://httpwg.github.io/specs/rfc7540.html#Http2SettingsHeader))首部字段。
 
 例如：
 
@@ -49,9 +49,9 @@ Content-Type: text/html
 ...
 ```
 
-> A server MUST ignore an "h2" token in an Upgrade header field. Presence of a token with "h2" implies HTTP/2 over TLS, which is instead negotiated as described in Section 3.3.
+> A server MUST ignore an "h2" token in an Upgrade header field. Presence of a token with "h2" implies HTTP/2 over TLS, which is instead negotiated as described in [Section 3.3](https://httpwg.github.io/specs/rfc7540.html#discover-https).
 
-服务端必须忽略值为"h2"的Upgrade首部字段。"h2"字段表示HTTP/2使用了TLS，其协商方法在3.3节中描述。
+服务端必须忽略值为"h2"的Upgrade首部字段。"h2"字段表示HTTP/2使用了TLS，其协商方法在[3.3节](https://httpwg.github.io/specs/rfc7540.html#discover-https)中描述。
 
 > A server that supports HTTP/2 accepts the upgrade with a 101 (Switching Protocols) response. After the empty line that terminates the 101 response, the server can begin sending HTTP/2 frames. These frames MUST include a response to the request that initiated the upgrade.
 > 
@@ -65,7 +65,7 @@ Content-Type: text/html
 > [ HTTP/2 connection ...
 > ```
 
-支持HTTP/2的服务端返回101(Switching Protocols)响应，表示接受升级协议的请求。结束101响应的空行之后，服务端可以开始发送HTTP/2帧。这些帧必须包含一个对升级请求的响应。
+支持HTTP/2的服务端返回101(Switching Protocols)响应，表示接受升级协议的请求。在结束101响应的空行之后，服务端可以开始发送HTTP/2帧。这些帧必须包含一个对升级请求的响应。
 
 例如：
 
@@ -77,10 +77,10 @@ Upgrade: h2c
 [ HTTP/2 connection ...
 ```
 
-> The first HTTP/2 frame sent by the server MUST be a server connection preface (Section 3.5) consisting of a SETTINGS frame (Section 6.5). Upon receiving the 101 response, the client MUST send a connection preface (Section 3.5), which includes a SETTINGS frame.
+> The first HTTP/2 frame sent by the server MUST be a server connection preface ([Section 3.5](https://httpwg.github.io/specs/rfc7540.html#ConnectionHeader)) consisting of a [SETTINGS](https://httpwg.github.io/specs/rfc7540.html#SETTINGS) frame ([Section 6.5](https://httpwg.github.io/specs/rfc7540.html#SETTINGS)). Upon receiving the 101 response, the client MUST send a connection preface ([Section 3.5](https://httpwg.github.io/specs/rfc7540.html#ConnectionHeader)), which includes a SETTINGS frame.
 
-服务端发送的第一个HTTP/2帧必须是由一个SETTINGS帧(6.5节)组成的服务端连接前奏(3.5节)。客户端一收到101响应，也必须发送一个包含SETTINGS帧的连接前奏。
+服务端发送的第一个HTTP/2帧必须是由一个[SETTINGS](https://httpwg.github.io/specs/rfc7540.html#SETTINGS)帧([6.5节](https://httpwg.github.io/specs/rfc7540.html#SETTINGS))组成的服务端连接前奏([3.5节](https://httpwg.github.io/specs/rfc7540.html#ConnectionHeader))。客户端一收到101响应，也必须发送一个包含[SETTINGS](https://httpwg.github.io/specs/rfc7540.html#SETTINGS)帧的连接前奏([3.5节](https://httpwg.github.io/specs/rfc7540.html#ConnectionHeader))。
 
-> The HTTP/1.1 request that is sent prior to upgrade is assigned a stream identifier of 1 (see Section 5.1.1) with default priority values (Section 5.3.5). Stream 1 is implicitly "half-closed" from the client toward the server (see Section 5.1), since the request is completed as an HTTP/1.1 request. After commencing the HTTP/2 connection, stream 1 is used for the response.
+> The HTTP/1.1 request that is sent prior to upgrade is assigned a stream identifier of 1 (see [Section 5.1.1](https://httpwg.github.io/specs/rfc7540.html#StreamIdentifiers)) with default priority values ([Section 5.3.5](https://httpwg.github.io/specs/rfc7540.html#pri-default)). Stream 1 is implicitly "half-closed" from the client toward the server (see [Section 5.1](https://httpwg.github.io/specs/rfc7540.html#StreamStates)), since the request is completed as an HTTP/1.1 request. After commencing the HTTP/2 connection, stream 1 is used for the response.
 
-升级之前发送的HTTP/1.1请求被分配一个流标识符1(5.1.1节)，并被赋予默认优先级值(5.3.5节)。流1暗示从客户端到服务端(5.1节)是半关闭的，因为该请求作为HTTP/1.1请求已经完成了。HTTP/2连接开始后，流1用于响应。
+升级之前发送的HTTP/1.1请求被分配一个流标识符1(参见[5.1.1节](https://httpwg.github.io/specs/rfc7540.html#StreamIdentifiers))，并被赋予默认优先级值([5.3.5节](https://httpwg.github.io/specs/rfc7540.html#pri-default))。流1暗示从客户端到服务端(参见[5.1节](https://httpwg.github.io/specs/rfc7540.html#StreamStates))是半关闭的，因为作为HTTP/1.1请求它已经完成了。HTTP/2连接开始后，流1用于响应。

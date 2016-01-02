@@ -1,7 +1,7 @@
 # HTTP/2 Version Identification / HTTP/2版本标识
 > The protocol defined in this document has two identifiers.
 > 
-> * The string "h2" identifies the protocol where HTTP/2 uses Transport Layer Security (TLS) [TLS12]. This identifier is used in the TLS application-layer protocol negotiation (ALPN) extension [TLS-ALPN] field and in any place where HTTP/2 over TLS is identified.
+> * The string "h2" identifies the protocol where HTTP/2 uses [Transport Layer Security (TLS)](https://httpwg.github.io/specs/rfc7540.html#TLS12) *[TLS12]*. This identifier is used in the [TLS application-layer protocol negotiation (ALPN) extension](https://httpwg.github.io/specs/rfc7540.html#TLS-ALPN) *[TLS-ALPN]* field and in any place where HTTP/2 over TLS is identified.
 > 
 > 	The "h2" string is serialized into an ALPN protocol identifier as the two-octet sequence: 0x68, 0x32.
 > 
