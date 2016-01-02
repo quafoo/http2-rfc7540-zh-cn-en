@@ -11,11 +11,11 @@
 
 每对HTTP请求/响应的交换都和自己的流([第5章](https://httpwg.github.io/specs/rfc7540.html#StreamsLayer))相关联，从而实现了请求的多路复用。流之间是相互独立的，所以阻塞或停止请求或响应不会中断其他的流。
 
-> ==Flow control== and ==prioritization== ensure that it is possible to efficiently use multiplexed streams. Flow control ([Section 5.2](https://httpwg.github.io/specs/rfc7540.html#FlowControl)) helps to ensure that only data that can be used by a ==receiver== is transmitted. Prioritization ([Section 5.3](https://httpwg.github.io/specs/rfc7540.html#StreamPriority)) ensures that limited resources can be directed to the most important streams first.
+> Flow control and prioritization ensure that it is possible to efficiently use multiplexed streams. Flow control ([Section 5.2](https://httpwg.github.io/specs/rfc7540.html#FlowControl)) helps to ensure that only data that can be used by a receiver is transmitted. Prioritization ([Section 5.3](https://httpwg.github.io/specs/rfc7540.html#StreamPriority)) ensures that limited resources can be directed to the most important streams first.
 
 流量控制和优先级机制确保能够高效地利用多路复用的流。流量控制([5.2节](https://httpwg.github.io/specs/rfc7540.html#FlowControl))有助于确保只传输接收方能够使用的数据。优先级机制([5.3节](https://httpwg.github.io/specs/rfc7540.html#StreamPriority))确保有限的资源首先被用于最重要的流。
 
-> HTTP/2 adds a new interaction mode whereby a server can push responses to a client ([Section 8.2](https://httpwg.github.io/specs/rfc7540.html#PushResources)). Server push allows a server to speculatively send data to a client that the server anticipates the client will need, trading off some network usage against a potential latency gain. ==The server does this by synthesizing a request, which it sends as a PUSH_PROMISE frame. The server is then able to send a response to the synthetic request on a separate stream.==
+> HTTP/2 adds a new interaction mode whereby a server can push responses to a client ([Section 8.2](https://httpwg.github.io/specs/rfc7540.html#PushResources)). Server push allows a server to speculatively send data to a client that the server anticipates the client will need, trading off some network usage against a potential latency gain. The server does this by synthesizing a request, which it sends as a PUSH_PROMISE frame. The server is then able to send a response to the synthetic request on a separate stream.
 
 HTTP/2增加了一种新的交互模式，即服务器能向客户端推送响应([8.2节](https://httpwg.github.io/specs/rfc7540.html#PushResources))。服务器推送功能允许服务器自主地向客户端发送它预期客户端会需要的数据，从而消耗一些网络带宽来取代潜在的网络延迟。服务器先综合一个PUSH\_PROMISE帧携带的请求，然后在一个独立的流上发送响应。
 

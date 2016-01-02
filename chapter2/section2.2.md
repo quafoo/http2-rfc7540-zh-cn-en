@@ -3,7 +3,7 @@
 
 本文档中出现的关键词"MUST","MUST NOT","REQUIRED","SHALL","SHALL NOT","SHOULD","SHOULD NOT","RECOMMENDED","MAY",和"OPTIONAL"在RFC 2119 [*[RFC2119]*](https://httpwg.github.io/specs/rfc7540.html#RFC2119)中有解释。
 
-> All numeric values are in network byte order. Values are unsigned unless otherwise indicated. ==Literal values== are provided in decimal or hexadecimal as appropriate. Hexadecimal literals are prefixed with 0x to distinguish them from decimal literals.
+> All numeric values are in network byte order. Values are unsigned unless otherwise indicated. Literal values are provided in decimal or hexadecimal as appropriate. Hexadecimal literals are prefixed with 0x to distinguish them from decimal literals.
 
 所有数值都以网络字节序表示。除非另有说明，否则数值都是无符号的。视情况以十进制或十六进制表示字面值。十六进制值带有0x前缀，以和十进制值区分开。
 
@@ -36,10 +36,10 @@
 * **流：** HTTP/2连接中的双向帧传输流。
 * **流错误：** 发生在单独的HTTP/2流上的错误。
 
-> Finally, the terms "gateway", "==intermediary==", "proxy", and "tunnel" are defined in [Section 2.3](https://httpwg.github.io/specs/rfc7230.html#intermediaries) of [*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230). Intermediaries act as both client and server at different times.
+> Finally, the terms "gateway", "intermediary", "proxy", and "tunnel" are defined in [Section 2.3](https://httpwg.github.io/specs/rfc7230.html#intermediaries) of [*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230). Intermediaries act as both client and server at different times.
 
 最后，『网关』、『中介』、『代理』和『隧道』等术语都在[*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230)的[2.3节](https://httpwg.github.io/specs/rfc7230.html#intermediaries)中有定义。在不同的时候，中介既可以是客户端，又可以是服务端。
 
-> The term "==payload body==" is defined in [Section 3.3](https://httpwg.github.io/specs/rfc7230.html#message.body) of [*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230).
+> The term "payload body" is defined in [Section 3.3](https://httpwg.github.io/specs/rfc7230.html#message.body) of [*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230).
 
 术语『有效载荷体』在[*[RFC 7230]*](https://httpwg.github.io/specs/rfc7540.html#RFC7230)的[3.3节](https://httpwg.github.io/specs/rfc7230.html#message.body)中有定义。
