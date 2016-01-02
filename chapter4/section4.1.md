@@ -59,6 +59,6 @@
 	针对确定的帧类型赋予标识特定的语义。与确定的帧类型语义不相符的标识必须被忽略，并且在发送时必须是未设置的(0x0)。
 	
 * **R:** 1bit的保留字段。未定义该bit的语义。当发送时，该bit必须是未设置的(0x0)；当接收时，必须忽略该bit。
-* **Stream Identifier:** 流标识符(参见 [5.1.1节](https://httpwg.github.io/specs/rfc7540.html#StreamIdentifiers) )是一个31bit的无符号整数。值0x0是保留的，标明帧是与整体的连接相关的，而不是和单独的流相关。
+* **Stream Identifier:** 流标识符(参见 [5.1.1节](https://httpwg.github.io/specs/rfc7540.html#StreamIdentifiers) )是一个31bit的无符号整数。值0x0是保留的，表明帧是与整体的连接相关的，而不是和单独的流相关。
 
 帧有效载荷结构和内容完全取决于帧类型。
