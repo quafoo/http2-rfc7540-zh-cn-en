@@ -1,4 +1,4 @@
-# Starting HTTP/2 with Prior Knowledge / 以先验方式启用HTTP/2
+# Starting HTTP/2 with Prior Knowledge / 先知情况下启用HTTP/2
 > A client can learn that a particular server supports HTTP/2 by other means. For example, [*[ALT-SVC]*](https://httpwg.github.io/specs/rfc7540.html#ALT-SVC) describes a mechanism for advertising this capability.
 
 客户端可以通过其他方式了解服务端是否支持HTTP/2。例如，[*[ALT-SVC]*](https://httpwg.github.io/specs/rfc7540.html#ALT-SVC) 描述了一种通知支持HTTP/2的机制。
