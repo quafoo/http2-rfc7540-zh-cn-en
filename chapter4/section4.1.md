@@ -31,7 +31,7 @@
 
 > The fields of the frame header are defined as:
 > 
-> * **Length:** The length of the frame payload expressed as an unsigned 24-bit integer. Values greater than 214 (16,384) MUST NOT be sent unless the receiver has set a larger value for SETTINGS_MAX_FRAME_SIZE.
+> * **Length:** The length of the frame payload expressed as an unsigned 24-bit integer. Values greater than 2^14 (16,384) MUST NOT be sent unless the receiver has set a larger value for SETTINGS\_MAX\_FRAME\_SIZE.
 > 
 > 	The 9 octets of the frame header are not included in this value.
 > 
@@ -43,18 +43,22 @@
 > 
 > * **R:** A reserved 1-bit field. The semantics of this bit are undefined, and the bit MUST remain unset (0x0) when sending and MUST be ignored when receiving.
 > 
-> * **Stream Identifier:** A stream identifier (see Section 5.1.1) expressed as an unsigned 31-bit integer. The value 0x0 is reserved for frames that are associated with the connection as a whole as opposed to an individual stream.
+> * **Stream Identifier:** A stream identifier (see [Section 5.1.1](https://httpwg.github.io/specs/rfc7540.html#StreamIdentifiers)) expressed as an unsigned 31-bit integer. The value 0x0 is reserved for frames that are associated with the connection as a whole as opposed to an individual stream.
 
 > The structure and content of the frame payload is dependent entirely on the frame type.
 
 帧首部字段定义如下：
 
-* **Length:** 帧有效载荷的长度，以24位无符号整数表示。除非接收端通过SETTINGS\_MAX\_FRAME\_SIZE设置了更大的值，否则不能发送长度值大于2^14 (16,384)的帧。
-* **Type:** 帧的8bit类型。帧类型决定了帧的格式和语义。必须忽略和丢弃任何未知帧类型。
+* **Length:** 帧有效载荷的长度，以24位无符号整数表示。除非接收端通过SETTINGS\_MAX\_FRAME\_SIZE设置了更大的值，否则不能发送Length值大于2^14 (16,384)的帧。
+
+	帧首部的9字节长度不计入该值。
+
+* **Type:** 8bit的帧类型。帧类型决定了帧的格式和语义。必须忽略和丢弃任何未知的帧类型。
 * **Flags:** 为帧类型保留的8bit布尔标识字段。
 
-	针对确定的帧类型赋予标识特定的语义。定义在确定的帧类型之外的标识语义必须被忽略，并且在发送时必须是未设置的(0x0)。
+	针对确定的帧类型赋予标识特定的语义。与确定的帧类型语义不相符的标识必须被忽略，并且在发送时必须是未设置的(0x0)。
+	
 * **R:** 1bit的保留字段。未定义该bit的语义。当发送时，该bit必须是未设置的(0x0)；当接收时，必须忽略该bit。
-* **Stream Identifier:** 流标识符(5.1.1节)是一个31bit的无符号整数。值0x0是保留的，标明帧是与整体的连接相关的，而不是和单独的流相关。
+* **Stream Identifier:** 流标识符(参见 [5.1.1节](https://httpwg.github.io/specs/rfc7540.html#StreamIdentifiers) )是一个31bit的无符号整数。值0x0是保留的，标明帧是与整体的连接相关的，而不是和单独的流相关。
 
 帧有效载荷结构和内容完全取决于帧类型。
