@@ -1,1 +1,4 @@
-# 
+# Reducing the Stream Window Size / Reducing the Stream Window Size
+> A receiver that wishes to use a smaller flow-control window than the current size can send a new SETTINGS frame. However, the receiver MUST be prepared to receive data that exceeds this window size, since the sender might send data that exceeds the lower limit prior to processing the SETTINGS frame.
+
+> After sending a SETTINGS frame that reduces the initial flow-control window size, a receiver MAY continue to process streams that exceed flow-control limits. Allowing streams to continue does not allow the receiver to immediately reduce the space it reserves for flow-control windows. Progress on these streams can also stall, since WINDOW\_UPDATE frames are needed to allow the sender to resume sending. The receiver MAY instead send a RST\_STREAM with an error code of FLOW\_CONTROL_ERROR for the affected streams.
