@@ -26,7 +26,7 @@
 		* [Reprioritization](chapter5/section5.3.3.md)
 		* [Prioritization State Management](chapter5/section5.3.4.md)
 		* [Default Priorities](chapter5/section5.3.5.md)
-	* [Error HandlingÅ](chapter5/section5.4.md)
+	* [Error Handling](chapter5/section5.4.md)
 		* [Connection Error Handling](chapter5/section5.4.1.md)
 		* [Stream Error Handling](chapter5/section5.4.2.md)
 		* [Connection Termination](chapter5/section5.4.3.md)
