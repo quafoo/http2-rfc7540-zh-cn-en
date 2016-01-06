@@ -51,7 +51,7 @@ HEADERS帧(type=0x1)用来打开一个流( [5.1节](https://httpwg.github.io/spe
 HEADERS帧载荷包含如下域：
 
 * **填充长度(Pad Length)**：一个8bit的域，包含帧填充数据的字节长度。只有当设置了PADDED标识时，才会有该域。
-* **E标识**：1bit标识，表示流依赖(参见 [5.3节](https://httpwg.github.io/specs/rfc7540.html#StreamPriority) )是否是专用的。只有当设置了PRIORITY标识，才会有该域。
+* **E标识**：1bit标识，表示流依赖是否是专用的(参见 [5.3节](https://httpwg.github.io/specs/rfc7540.html#StreamPriority) )。只有当设置了PRIORITY标识，才会有该域。
 * **流依赖(Stream Dependency)**：该流所依赖的流(参见 [5.3节](https://httpwg.github.io/specs/rfc7540.html#StreamPriority) )的31bit标识符。只有当设置了PRIORITY标识，才会有该域。
 * **权重(Weight)**：一个8bit的无符号整数，表示该流的优先级权重(参见 [5.3节](https://httpwg.github.io/specs/rfc7540.html#StreamPriority) )。范围是1到255。只有当设置了PRIORITY标识，才会有该域。
 * **首部块片段(Header Block Fragment)**：一个首部块片段(参见 [4.3节](https://httpwg.github.io/specs/rfc7540.html#HeaderBlock) )。
