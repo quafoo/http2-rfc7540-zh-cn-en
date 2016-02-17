@@ -1,7 +1,7 @@
 # SETTINGS / SETTINGS帧
 > The SETTINGS frame (type=0x4) conveys configuration parameters that affect how endpoints communicate, such as preferences and constraints on peer behavior. The SETTINGS frame is also used to acknowledge the receipt of those parameters. Individually, a SETTINGS parameter can also be referred to as a "setting".
 
-SETTINGS帧(type=0x4)用来传送影响两端通信的配置参数，比如：对对端行为的偏好与约束等。SETTINGS帧也用于通知对端自己收到了这些参数。特别地，SETTIGNS参数也可以被称做 设置(setting)。
+SETTINGS帧(type=0x4)用来传送影响两端通信的配置参数，比如：对对端行为的偏好与约束等。SETTINGS帧也用于通知对端自己收到了这些参数。特别地，SETTIGNS参数也可以被称做 设置参数(setting)。
 
 
 > SETTINGS parameters are not negotiated; they describe characteristics of the sending peer, which are used by the receiving peer. Different values for the same parameter can be advertised by each peer. For example, a client might set a high initial flow-control window, whereas a server might set a lower value to conserve resources.
