@@ -1,4 +1,8 @@
-# HTTP Request/Response Exchange
+# HTTP Message Exchanges / HTTP消息交换
 > HTTP/2 is intended to be as compatible as possible with current uses of HTTP. This means that, from the application perspective, the features of the protocol are largely unchanged. To achieve this, all request and response semantics are preserved, although the syntax of conveying those semantics has changed.
 
-> Thus, the specification and requirements of HTTP/1.1 Semantics and Content [RFC7231], Conditional Requests [RFC7232], Range Requests [RFC7233], Caching [RFC7234], and Authentication [RFC7235] are applicable to HTTP/2. Selected portions of HTTP/1.1 Message Syntax and Routing [RFC7230], such as the HTTP and HTTPS URI schemes, are also applicable in HTTP/2, but the expression of those semantics for this protocol are defined in the sections below.
+HTTP/2需要和当前使用的HTTP尽可能地兼容。这意味着，从应用程序的角度来看，大部分的协议特性不变。尽管表达这些语义的语法已经改变，为了达到这个目的，所有请求和响应的语义都被保留。
+
+> Thus, the specification and requirements of HTTP/1.1 Semantics and Content [*[RFC7231]*](http://httpwg.org/specs/rfc7540.html#RFC7231), Conditional Requests [*[RFC7232]*](http://httpwg.org/specs/rfc7540.html#RFC7232), Range Requests [*[RFC7233]*](http://httpwg.org/specs/rfc7540.html#RFC7233), Caching [*[RFC7234]*](http://httpwg.org/specs/rfc7540.html#RFC7234), and Authentication [*[RFC7235]*](http://httpwg.org/specs/rfc7540.html#RFC7235) are applicable to HTTP/2. Selected portions of HTTP/1.1 Message Syntax and Routing [*[RFC7230]*](http://httpwg.org/specs/rfc7540.html#RFC7230), such as the HTTP and HTTPS URI schemes, are also applicable in HTTP/2, but the expression of those semantics for this protocol are defined in the sections below.
+
+这样，HTTP/1.1的语义和内容 [*[RFC7231]*](http://httpwg.org/specs/rfc7540.html#RFC7231)、条件请求 [*[RFC7232]*](http://httpwg.org/specs/rfc7540.html#RFC7232)、范围请求 [*[RFC7233]*](http://httpwg.org/specs/rfc7540.html#RFC7233)、缓存 [*[RFC7234]*](http://httpwg.org/specs/rfc7540.html#RFC7234) 和 认证 [*[RFC7235]*](http://httpwg.org/specs/rfc7540.html#RFC7235) 的协议规范和要求也适用于HTTP/2。HTTP/1.1消息语法和路由 [*[RFC7230]*](http://httpwg.org/specs/rfc7540.html#RFC7230) 选择的部分，如HTTP和HTTPS URI方案，也适用于HTTP/2，但是那些语义在HTTP/2协议中的表达在下面的章节有定义。
