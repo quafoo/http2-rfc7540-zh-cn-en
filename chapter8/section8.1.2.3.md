@@ -38,4 +38,4 @@ HTTP/2请求定义了如下伪首部字段：
 
 > HTTP/2 does not define a way to carry the version identifier that is included in the HTTP/1.1 request line.
 
-HTTP/2没有定义携带HTTP/1.1请求行包含的版本号的方法。
+HTTP/2没有定义携带HTTP/1.1请求行里包含的版本号的方法。
