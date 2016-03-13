@@ -13,7 +13,7 @@
 > 
 > * The :path pseudo-header field includes the path and query parts of the target URI (the path-absolute production and optionally a '?' character followed by the query production (see Sections [3.3](https://tools.ietf.org/html/rfc3986#section-3.3) and [3.4](https://tools.ietf.org/html/rfc3986#section-3.4) of [*[RFC3986]*](http://httpwg.org/specs/rfc7540.html#RFC3986)). A request in asterisk form includes the value '*' for the :path pseudo-header field.
 > 
-> 	This pseudo-header field MUST NOT be empty for http or https URIs; http or https URIs that do not contain a path component MUST include a value of '/'. The exception to this rule is an OPTIONS request for an http or https URI that does not include a path component; these MUST include a :path pseudo-header field with a value of '*' (see [*[RFC7230]*](http://httpwg.org/specs/rfc7540.html#RFC7230), [Section 5.3.4](http://httpwg.org/specs/rfc7230.html#asterisk-form)).
+> 	This pseudo-header field MUST NOT be empty for http or https URIs; http or https URIs that do not contain a path component MUST include a value of '/'. The exception to this rule is an OPTIONS request for an http or https URI that does not include a path component; these MUST include a :path pseudo-header field with a value of '\*' (see [*[RFC7230]*](http://httpwg.org/specs/rfc7540.html#RFC7230), [Section 5.3.4](http://httpwg.org/specs/rfc7230.html#asterisk-form)).
 
 HTTP/2请求定义了如下伪首部字段：
 
@@ -28,7 +28,7 @@ HTTP/2请求定义了如下伪首部字段：
 
 * `:path`伪首部字段包含目标URI的path和query部分(绝对路径部分和一个后跟query部分的可选的'?'字符(参见 [*[RFC3986]*](http://httpwg.org/specs/rfc7540.html#RFC3986) 的 [3.3节](https://tools.ietf.org/html/rfc3986#section-3.3) 和 [3.4节](https://tools.ietf.org/html/rfc3986#section-3.4) ))。星号形式的请求包含:path伪首部字段的'*'值。
 
-  对于http或者https URIs，该伪首部字段不能为空。不包含path组件的http或https URIs必须包含一个'/'值。该规则的例外情况是OPTIONS请求，其http或https URI不包含path组件，此时必须包含一个值为'*'的`:path`伪首部字段(参见 [ *[RFC7230]*](http://httpwg.org/specs/rfc7540.html#RFC7230)，[5.3.4节](http://httpwg.org/specs/rfc7230.html#asterisk-form) )。
+  对于http或者https URIs，该伪首部字段不能为空。不包含path组件的http或https URIs必须包含一个'/'值。该规则的例外情况是OPTIONS请求，其http或https URI不包含path组件，此时必须包含一个值为'\*'的`:path`伪首部字段(参见 [*[RFC7230]*](http://httpwg.org/specs/rfc7540.html#RFC7230)， [5.3.4节](http://httpwg.org/specs/rfc7230.html#asterisk-form) )。
 
 
 > All HTTP/2 requests MUST include exactly one valid value for the :method, :scheme, and :path pseudo-header fields, unless it is a CONNECT request ([Section 8.3](http://httpwg.org/specs/rfc7540.html#CONNECT)). An HTTP request that omits mandatory pseudo-header fields is malformed ([Section 8.1.2.6](http://httpwg.org/specs/rfc7540.html#malformed)).
